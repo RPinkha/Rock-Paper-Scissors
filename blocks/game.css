@@ -1,0 +1,21 @@
+.game__button {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  padding: 0;
+}
+
+.game__button_type_rock {
+  background-image: url(../Images/Rock.png);
+}
+
+.game__button_type_paper {
+  background-image: url(../Images/Paper.png);
+}
+
+.game__button_type_scissors {
+  background-image: url(../Images/Scissors.png);
+}
