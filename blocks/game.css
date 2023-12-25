@@ -1,6 +1,10 @@
+.game__description {
+  max-width: 800px;
+}
+
 .game__button {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
