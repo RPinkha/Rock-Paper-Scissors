@@ -11,6 +11,17 @@ function computerRandom() {
 }
 
 const wholeGame = document.querySelector(".game");
-const rockButton = wholeGame.querySelector(".game__button_type_rock");
-const paperButton = wholeGame.querySelector(".game__button_type_paper");
-const scissorsButton = wholeGame.querySelector(".game__button_type_scissors");
+
+wholeGame.addEventListener("click", (evt) => {
+  switch (true) {
+    case evt.target.classList.contains("game__button_type_rock"):
+      userSelection = "R";
+      break;
+    case evt.target.classList.contains("game__button_type_paper"):
+      userSelection = "P";
+      break;
+    case evt.target.classList.contains("game__button_type_scissors"):
+      userSelection = "S";
+      break;
+  }
+});
