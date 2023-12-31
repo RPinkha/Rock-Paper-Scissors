@@ -1,5 +1,6 @@
 let computerSelection = "";
 let userSelection = "";
+let result = "";
 
 function computerRandom() {
   let computerRandomNumber = Math.random();
@@ -8,6 +9,33 @@ function computerRandom() {
     : computerRandomNumber >= 0.67
     ? (computerSelection = "R")
     : (computerSelection = "P");
+}
+
+function whoWins(computerSelection, userSelection) {
+  if (userSelection === computerSelection) {
+    return (result = "draw");
+  }
+  if (userSelection === "R") {
+    if (computerSelection === "S") {
+      return (result = "user wins");
+    } else {
+      return (result = "computer wins");
+    }
+  }
+  if (userSelection === "S") {
+    if (computerSelection === "P") {
+      return (result = "user wins");
+    } else {
+      return (result = "computer wins");
+    }
+  }
+  if (userSelection === "P") {
+    if (computerSelection === "R") {
+      return (result = "user wins");
+    } else {
+      return (result = "computer wins");
+    }
+  }
 }
 
 const wholeGame = document.querySelector(".game");
