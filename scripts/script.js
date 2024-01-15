@@ -5,32 +5,32 @@ let result = "";
 function computerRandom() {
   let computerRandomNumber = Math.random();
   computerRandomNumber <= 0.33
-    ? (computerSelection = "S")
+    ? (computerSelection = "Scissors")
     : computerRandomNumber >= 0.67
-    ? (computerSelection = "R")
-    : (computerSelection = "P");
+    ? (computerSelection = "Rock")
+    : (computerSelection = "Paper");
 }
 
 function whoWins(computerSelection, userSelection) {
   if (userSelection === computerSelection) {
     return (result = "draw");
   }
-  if (userSelection === "R") {
-    if (computerSelection === "S") {
+  if (userSelection === "Rock") {
+    if (computerSelection === "Scissors") {
       return (result = "user wins");
     } else {
       return (result = "computer wins");
     }
   }
-  if (userSelection === "S") {
-    if (computerSelection === "P") {
+  if (userSelection === "Scissors") {
+    if (computerSelection === "Paper") {
       return (result = "user wins");
     } else {
       return (result = "computer wins");
     }
   }
-  if (userSelection === "P") {
-    if (computerSelection === "R") {
+  if (userSelection === "Paper") {
+    if (computerSelection === "Rock") {
       return (result = "user wins");
     } else {
       return (result = "computer wins");
@@ -43,13 +43,13 @@ const wholeGame = document.querySelector(".game");
 wholeGame.addEventListener("click", (evt) => {
   switch (true) {
     case evt.target.classList.contains("game__button_type_rock"):
-      userSelection = "R";
+      userSelection = "Rock";
       break;
     case evt.target.classList.contains("game__button_type_paper"):
-      userSelection = "P";
+      userSelection = "Paper";
       break;
     case evt.target.classList.contains("game__button_type_scissors"):
-      userSelection = "S";
+      userSelection = "Scissors";
       break;
   }
 });

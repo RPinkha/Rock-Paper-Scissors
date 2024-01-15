@@ -1,5 +1,19 @@
-.game__description {
+.game__title {
+  text-align: center;
   max-width: 800px;
+  margin: 0 auto;
+}
+
+.game__description {
+  max-width: 500px;
+  text-align: center;
+  margin: 20px auto 50px;
+}
+
+.game__selections {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
 .game__button {
