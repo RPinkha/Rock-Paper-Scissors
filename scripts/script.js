@@ -4,7 +4,7 @@ let result = "";
 
 function computerRandom() {
   let computerRandomNumber = Math.random();
-  computerRandomNumber <= 0.33
+  return computerRandomNumber <= 0.33
     ? (computerSelection = "Scissors")
     : computerRandomNumber >= 0.67
     ? (computerSelection = "Rock")
@@ -41,15 +41,19 @@ function whoWins(computerSelection, userSelection) {
 const wholeGame = document.querySelector(".game");
 
 wholeGame.addEventListener("click", (evt) => {
+  computerRandom();
   switch (true) {
     case evt.target.classList.contains("game__button_type_rock"):
       userSelection = "Rock";
+      whoWins(computerSelection, userSelection);
       break;
     case evt.target.classList.contains("game__button_type_paper"):
       userSelection = "Paper";
+      whoWins(computerSelection, userSelection);
       break;
     case evt.target.classList.contains("game__button_type_scissors"):
       userSelection = "Scissors";
+      whoWins(computerSelection, userSelection);
       break;
   }
 });
