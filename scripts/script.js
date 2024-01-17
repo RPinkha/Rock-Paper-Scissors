@@ -13,32 +13,30 @@ function computerRandom() {
 
 function whoWins(computerSelection, userSelection) {
   if (userSelection === computerSelection) {
-    return (result = "draw");
-  }
-  if (userSelection === "Rock") {
+    result = "It is a draw!";
+  } else if (userSelection === "Rock") {
     if (computerSelection === "Scissors") {
-      return (result = "user wins");
+      result = "You win!";
     } else {
-      return (result = "computer wins");
+      result = "Sorry, the computer wins";
     }
-  }
-  if (userSelection === "Scissors") {
+  } else if (userSelection === "Scissors") {
     if (computerSelection === "Paper") {
-      return (result = "user wins");
+      result = "You win!";
     } else {
-      return (result = "computer wins");
+      result = "Sorry, the computer wins";
     }
-  }
-  if (userSelection === "Paper") {
+  } else if (userSelection === "Paper") {
     if (computerSelection === "Rock") {
-      return (result = "user wins");
+      result = "You win!";
     } else {
-      return (result = "computer wins");
+      result = "Sorry, the computer wins";
     }
   }
 }
 
 const wholeGame = document.querySelector(".game");
+const gameResult = wholeGame.querySelector(".game__result");
 
 wholeGame.addEventListener("click", (evt) => {
   computerRandom();
@@ -46,14 +44,17 @@ wholeGame.addEventListener("click", (evt) => {
     case evt.target.classList.contains("game__button_type_rock"):
       userSelection = "Rock";
       whoWins(computerSelection, userSelection);
+      gameResult.textContent = result;
       break;
     case evt.target.classList.contains("game__button_type_paper"):
       userSelection = "Paper";
       whoWins(computerSelection, userSelection);
+      gameResult.textContent = result;
       break;
     case evt.target.classList.contains("game__button_type_scissors"):
       userSelection = "Scissors";
       whoWins(computerSelection, userSelection);
+      gameResult.textContent = result;
       break;
   }
 });
