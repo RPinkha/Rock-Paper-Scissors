@@ -1,6 +1,8 @@
 let computerSelection = "";
 let userSelection = "";
 let result = "";
+let userScore = 0;
+let computerScore = 0;
 
 function computerRandom() {
   let computerRandomNumber = Math.random();
@@ -17,20 +19,26 @@ function whoWins(computerSelection, userSelection) {
   } else if (userSelection === "Rock") {
     if (computerSelection === "Scissors") {
       result = "You win!";
+      userScore++;
     } else {
       result = "Sorry, the computer wins";
+      computerScore++;
     }
   } else if (userSelection === "Scissors") {
     if (computerSelection === "Paper") {
       result = "You win!";
+      userScore++;
     } else {
       result = "Sorry, the computer wins";
+      computerScore++;
     }
   } else if (userSelection === "Paper") {
     if (computerSelection === "Rock") {
       result = "You win!";
+      userScore++;
     } else {
       result = "Sorry, the computer wins";
+      computerScore++;
     }
   }
 }
