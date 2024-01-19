@@ -13,32 +13,36 @@ function computerRandom() {
     : (computerSelection = "Paper");
 }
 
+function computerWins() {
+  result = "Sorry, the computer wins";
+  computerScore++;
+}
+
+function userWins() {
+  result = "You win!";
+  userScore++;
+}
+
 function whoWins(computerSelection, userSelection) {
   if (userSelection === computerSelection) {
     result = "It is a draw!";
   } else if (userSelection === "Rock") {
     if (computerSelection === "Scissors") {
-      result = "You win!";
-      userScore++;
+      userWins();
     } else {
-      result = "Sorry, the computer wins";
-      computerScore++;
+      computerWins();
     }
   } else if (userSelection === "Scissors") {
     if (computerSelection === "Paper") {
-      result = "You win!";
-      userScore++;
+      userWins();
     } else {
-      result = "Sorry, the computer wins";
-      computerScore++;
+      computerWins();
     }
   } else if (userSelection === "Paper") {
     if (computerSelection === "Rock") {
-      result = "You win!";
-      userScore++;
+      userWins();
     } else {
-      result = "Sorry, the computer wins";
-      computerScore++;
+      computerWins();
     }
   }
 }
