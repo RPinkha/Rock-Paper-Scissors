@@ -98,8 +98,9 @@
   }
   .game__selections {
     gap: 22px;
+    flex-wrap: wrap;
   }
-}
-
-@media screen and (max-width: 400px) {
+  .game__score {
+    gap: 25px;
+  }
 }
