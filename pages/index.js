@@ -1,13 +1,15 @@
+import {
+  gameSelections,
+  gameResult,
+  userScoreEl,
+  computerScoreEl,
+} from "../utils/constants.js";
+
 let computerSelection = "";
 let userSelection = "";
 let result = "";
 let userScore = 0;
 let computerScore = 0;
-
-const wholeGame = document.querySelector(".game");
-const gameResult = wholeGame.querySelector(".game__result");
-const userScoreEl = wholeGame.querySelector(".game__score-user");
-const computerScoreEl = wholeGame.querySelector(".game__score-computer");
 
 function computerRandom() {
   let computerRandomNumber = Math.random();
@@ -54,7 +56,7 @@ function whoWins(computerSelection, userSelection) {
   }
 }
 
-wholeGame.addEventListener("click", (evt) => {
+gameSelections.addEventListener("click", (evt) => {
   computerRandom();
   switch (true) {
     case evt.target.classList.contains("game__button_type_rock"):
