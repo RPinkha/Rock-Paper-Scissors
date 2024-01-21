@@ -4,6 +4,11 @@ let result = "";
 let userScore = 0;
 let computerScore = 0;
 
+const wholeGame = document.querySelector(".game");
+const gameResult = wholeGame.querySelector(".game__result");
+const userScoreEl = wholeGame.querySelector(".game__score-user");
+const computerScoreEl = wholeGame.querySelector(".game__score-computer");
+
 function computerRandom() {
   let computerRandomNumber = Math.random();
   return computerRandomNumber <= 0.33
@@ -16,11 +21,13 @@ function computerRandom() {
 function computerWins() {
   result = "Sorry, the computer wins";
   computerScore++;
+  computerScoreEl.textContent = computerScore;
 }
 
 function userWins() {
   result = "You win!";
   userScore++;
+  userScoreEl.textContent = userScore;
 }
 
 function whoWins(computerSelection, userSelection) {
@@ -46,9 +53,6 @@ function whoWins(computerSelection, userSelection) {
     }
   }
 }
-
-const wholeGame = document.querySelector(".game");
-const gameResult = wholeGame.querySelector(".game__result");
 
 wholeGame.addEventListener("click", (evt) => {
   computerRandom();

@@ -26,6 +26,7 @@
   justify-content: center;
   gap: 50px;
   list-style-type: none;
+  padding: 0;
 }
 
 .game__score-title {
@@ -78,4 +79,27 @@
 
 .game__button_type_scissors {
   background-image: url(../Images/Scissors.png);
+}
+
+@media screen and (max-width: 600px) {
+  .game__button {
+    width: 125px;
+    height: 125px;
+  }
+  .game__selections {
+    gap: 26px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game__button {
+    width: 100px;
+    height: 100px;
+  }
+  .game__selections {
+    gap: 22px;
+  }
+}
+
+@media screen and (max-width: 400px) {
 }
