@@ -89,6 +89,14 @@
   .game__selections {
     gap: 26px;
   }
+  .game__title {
+  }
+  .game__description {
+  }
+  .game__score-title {
+  }
+  .game__score-number {
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -102,5 +110,13 @@
   }
   .game__score {
     gap: 25px;
+  }
+  .game__title {
+  }
+  .game__description {
+  }
+  .game__score-title {
+  }
+  .game__score-number {
   }
 }
